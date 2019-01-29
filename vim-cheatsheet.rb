@@ -26,12 +26,14 @@ cheatsheet do
     notes 'All of these can be added to your `.vimrc` or run in-vim using `set <setting`'
     notes 'You can turn any of these off by prepending `no` to them, e.g. `set nonu` turns off line numbers'
     entry do
-      command 'number/nu'
+      command 'number'
+      command 'nu'
       name 'Show line numbers'
     end
 
     entry do
-      command 'relativenumber/rnu'
+      command 'relativenumber'
+      command 'rnu'
       name 'Show relative line numbers'
     end
 
@@ -82,7 +84,8 @@ cheatsheet do
     end
 
     entry do
-      command 'splitbelow/splitright'
+      command 'splitbelow'
+      command 'splitright'
       name 'Open new split panes to the right and bottom, which feels more natural'
     end
 
@@ -94,6 +97,16 @@ cheatsheet do
 
   category do
     id 'Commands'
+    notes 'Many commands can be chained together, especially the motion ones. Otherwise, you can just put a `|` between them'
+    entry do
+      command ':q'
+      name 'Quit vim'
+    end
 
+    entry do
+      command ':help [<topic>]'
+      name 'View help page (for an optional topic, if desired)'
+      notes 'These docs can be very helpful for learning how a command works!'
+    end
   end
 end
